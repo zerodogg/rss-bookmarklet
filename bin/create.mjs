@@ -44,7 +44,7 @@ const readme = `
 
 Inject a small div on top of the pages with the list of RSS feed published on the page. Drag and drop the link it to the bookmars toolbar
 
-[RSS Links](${output})
+<a href="${output}">RSS Links</a>
 
 To create a new version run:
 
