@@ -36,5 +36,23 @@ Drag and drop the link it to the bookmars toolbar
 </body>
 `;
 
-const out = path.resolve(__dirname, "../bookmarklet.html");
-await writeFile(out, page);
+const html = path.resolve(__dirname, "../bookmarklet.html");
+await writeFile(html, page);
+
+const readme = `
+# RSS Bookmarklet
+
+Inject a small div on top of the pages with the list of RSS feed published on the page. Drag and drop the link it to the bookmars toolbar
+
+[RSS Links](${output})
+
+To create a new version run:
+
+\`\`\`bash
+npm install
+bin/create.mjs
+\`\`\` 
+`;
+
+const md = path.resolve(__dirname, "../README.md");
+await writeFile(md, readme);
