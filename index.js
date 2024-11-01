@@ -15,15 +15,18 @@ const BUTTON_CLASS_TIMEOUT = 1000;
  */
 const CSS = `
 :host {
-    background-color: #222;
-    font-family: sans-serif;
-    padding: 1rem;
-    font-size: 1rem;
-    border-bottom: 1px solid #fff;
-    box-shadow: 0px 0px 15px #000a;
-    color: #ccc;
-    position: relative;
-    z-index: 9999999;
+    menu {
+      background-color: #222;
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      z-index: 9999999;
+      color: #ccc;
+      box-shadow: 0px 0px 15px #000a;
+      font-family: sans-serif;
+      font-size: 1rem;
+      border-bottom: 1px solid #333;
+    }
 
     * {
         margin: 0;
