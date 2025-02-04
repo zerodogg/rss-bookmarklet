@@ -104,6 +104,9 @@ const elementAlreadyExists = () => {
  * compatible string to use in the shadowDom template
  */
 const renderList = (nodeList) => {
+  if(nodeList.length === 0) {
+      return "<li>No RSS feeds found</li>";
+  }
   return [...nodeList]
     .map((item) => {
       const href = item.href;
@@ -170,7 +173,7 @@ const items = getAllRssItems();
 const exists = elementAlreadyExists();
 
 // Render and attach the component if possible
-if (items.length > 0 && !exists) {
+if (!exists) {
   const host = createComponent(items);
   delegateClickEventTo(host);
   attachComponent(host);
